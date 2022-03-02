@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/d9a3d8d8d7.js" crossorigin="anonymous"></script>
+    <title>ErtuzzPvP | Homepage</title>
+  </head>
+  <body style="background-image: url({{ url_for('static',filename='img/bg.png') }}); background-attachment: fixed;" class="bg-cover lg:">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-216397404-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-216397404-2');
+    </script>
+
+    <nav class="flex justify-center px-4 text-gray-800 bg-transparent">
+      <div class="container py-2">
+        <hr class="h-px mt-3 border-gray-300 dark:bg-gray-700 border-none">
+        <div class="flex flex-col items-center justify-between mt-3 md:flex-row">
+          <div>
+            <a href="/"><img class="h-32 w-auto grow" src="{{ url_for('static',filename='img/logo.png') }}" alt="Logo"/></a>
+          </div>
+          <div class="flex mt-6 md:m-0">
+            <div class="-mx-4 uppercase border border-opacity-25 rounded-md shadow p-3">
+              <a href="/team" class="px-3 text-m font-bold text-gray-100 font-medium hover:text-gray-300"><i class="fa fa-users"></i> Team</a>
+              <a href="https://ertuzzpvp.forumieren.de" class="px-3 text-m font-bold text-gray-100 font-medium hover:text-gray-300"><i class="fas fa-comment-alt"></i> Forum</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="mt-32:lg mt-56"></div>
+    <div class="text-center text-gray-100 text-4xl my-4">
+      ErtuzzPvP
+    </div>
+
+    <hr class="mx-auto" style="width:30%"/>
+    <div class="grid grid-cols-1 p-2">
+      <div class="place-self-center text-center text-gray-100 text-xl my-4">
+        <div class="p-2 rounded-lg bg-gray-500">
+          <div class="p-2 rounded-lg bg-gray-500">
+            Spiel mit auf <span class="pl-1 font-bold">ertuzz.neruxvace.cloud</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-72"></div>
+    <footer class="bg-transparent">
+      <div class="container mx-auto px-6 py-4">
+        <div class="lg:flex">
+          <div class="mt-6 lg:mt-0 lg:flex-1">
+            <div class="grid gap-2 grid-cols-1 sm:grid-cols-1 md:grid-cols-2">
+              <a href="https://discord.gg/fha3WAYten" target=”_blank” class="place-self-center px-3 text-m font-bold text-gray-100 font-medium hover:text-gray-300"><i class="fab fa-discord"></i> Discord</a>
+              <a href="https://twitter.com/ErtuzzPvP" target=”_blank” class="place-self-center px-3 text-m font-bold text-gray-100 font-medium hover:text-gray-300"><i class="fab fa-twitter"></i> Twitter</a>
+            </div>
+          </div>
+        </div>
+
+        <hr class="h-px my-6 bg-gray-300 border-none">
+        <div>
+          <p class="text-center text-gray-100">© ErtuzzPvP - <a class="hover:text-yellow-300" href="/impressum">Impressum</a> - by <a class="hover:text-yellow-300" href="https://gamingpascal1.eu/vazeweb/index.html">VazeWeb</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="absolute top-0 left-0 z-0 h-screen w-full pointer-events-none" id="particles-js"></div>
+
+    <script src="{{ url_for('static', filename='js/particles.min.js') }}"></script>
+    <script>
+    	particlesJS.load('particles-js', "{{ url_for('static', filename='js/particles.json') }}");
+    </script>
+    <script src="https://leonardosnt.github.io/mc-player-counter/dist/mc-player-counter.min.js"></script>
+  </body>
+</html>
