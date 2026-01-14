@@ -16,7 +16,7 @@ export default function RootLayout({
           height: 40
          }}><h1>Ertuzz Networks</h1></header>
         {children}
-         <footer>Kontakt: <a href="mailto:ertuzzpvp@gmail.com">Schicke dem Server eine E-Mail</a></footer>
+         <footer>Kontakt: <a href="mailto:kontakt@ertuzz.net">Schicke dem Server eine E-Mail</a></footer>
       </body>
     </html>
   )
